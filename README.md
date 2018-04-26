@@ -7,8 +7,16 @@ module restore cuda
 source activate maskRCNN
 ```
 
-Follow instructions below to install dependencies for MatterPort project.
+Pip install dependencies from fork.
 
+
+# Reading and Resources
+
+- https://github.com/chongyangtao/Awesome-Scene-Text-Recognition
+- PRImA Research (PAGE, Aletheia)
+- Cornell Visipedia
+
+N.B. the following material is the forked MatterPort README.
 
 
 # Mask R-CNN for Object Detection and Segmentation
