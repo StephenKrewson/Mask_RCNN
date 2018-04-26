@@ -1,3 +1,16 @@
+# My Additions
+
+First, I downloaded Anaconda on Grace cluster. To start hacking, use:
+
+```
+module restore cuda
+source activate maskRCNN
+```
+
+Follow instructions below to install dependencies for MatterPort project.
+
+
+
 # Mask R-CNN for Object Detection and Segmentation
 
 This is an implementation of [Mask R-CNN](https://arxiv.org/abs/1703.06870) on Python 3, Keras, and TensorFlow. The model generates bounding boxes and segmentation masks for each instance of an object in the image. It's based on Feature Pyramid Network (FPN) and a ResNet101 backbone.
