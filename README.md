@@ -7,7 +7,7 @@ module restore cuda
 source activate maskRCNN
 ```
 
-Pip install dependencies from fork.
+Pip install dependencies from fork. Didn't download COCO dataset (but did clone the Python API repo from the balloon tutorial author). Seems like you just need the weights not the actual data.
 
 
 # Reading and Resources
