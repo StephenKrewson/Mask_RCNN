@@ -27,3 +27,11 @@ localhost:9265  (prefix w/ https:// if using password)
     Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://c23n01:9265/?token=436f399e000ef775f2e87dbc9191f7e17639fe042d3753ad
+[I 14:04:21.155 NotebookApp] 302 GET /?token=436f399e000ef775f2e87dbc9191f7e17639fe042d3753ad (10.181.0.11) 0.79ms
+[W 14:04:36.208 NotebookApp] Notebook inspect_balloon_data.ipynb is not trusted
+[I 14:04:39.155 NotebookApp] Kernel started: af2e5416-eebd-41d0-9178-fe862a7f7cf8
+[I 14:04:42.065 NotebookApp] Adapting to protocol v5.1 for kernel af2e5416-eebd-41d0-9178-fe862a7f7cf8
+[I 14:06:40.098 NotebookApp] Saving file at /inspect_balloon_data.ipynb
+[W 14:10:12.067 NotebookApp] WebSocket ping timeout after 119992 ms.
+[I 14:10:17.071 NotebookApp] Starting buffering for af2e5416-eebd-41d0-9178-fe862a7f7cf8:37d7f6efa2284d7d81078a4bf5168459
+slurmstepd: error: *** JOB 12912737 ON c23n01 CANCELLED AT 2018-04-27T13:41:14 DUE TO TIME LIMIT ***
