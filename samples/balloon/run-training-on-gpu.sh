@@ -3,6 +3,7 @@
 #SBATCH --mail-user=stephen.krewson@yale.edu
 #SBATCH -p gpu
 #SBATCH -c 10
+#SBATCH --mem-per-cpu=12g
 #SBATCH -t 5:00:00
 #SBATCH --gres=gpu:2
 #SBATCH --gres-flags=enforce-binding
@@ -15,5 +16,5 @@ module restore cuda
 source deactivate
 source activate maskRCNN
 
-python balloon.py train --dataset="~/project/Mask_RCNN/datasets/balloon" --weights=coco
+python balloon.py train --dataset=../../datasets/balloon --weights=coco
 
