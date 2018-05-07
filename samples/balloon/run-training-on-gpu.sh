@@ -16,5 +16,6 @@ module restore cuda
 source deactivate
 source activate maskRCNN
 
-python balloon.py train --dataset=../../datasets/balloon --weights=coco
+# trying with illustrations dataset...
+python balloon.py train --dataset=../../datasets/illustrations --weights=coco
 
