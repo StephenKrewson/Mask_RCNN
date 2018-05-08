@@ -3,7 +3,7 @@
 #SBATCH --mail-user=stephen.krewson@yale.edu
 #SBATCH -p gpu
 #SBATCH -c 10
-#SBATCH --mem-per-cpu=12g
+#SBATCH --mem-per-cpu=8g
 #SBATCH -t 5:00:00
 #SBATCH --gres=gpu:2
 #SBATCH --gres-flags=enforce-binding
