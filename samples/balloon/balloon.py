@@ -126,7 +126,13 @@ class BalloonDataset(utils.Dataset):
             # Unfortunately, VIA doesn't include it in JSON, so we must read
             # the image. This is only managable since the dataset is tiny.
             image_path = os.path.join(dataset_dir, a['filename'])
-            image = skimage.io.imread(image_path)
+
+            try:
+                image = skimage.io.imread(image_path)
+            except FileNotFoundError:
+                continue
+
+
             height, width = image.shape[:2]
 
             self.add_image(
@@ -135,6 +141,7 @@ class BalloonDataset(utils.Dataset):
                 path=image_path,
                 width=width, height=height,
                 polygons=polygons)
+
 
     def load_mask(self, image_id):
         """Generate instance masks for an image.
@@ -155,7 +162,12 @@ class BalloonDataset(utils.Dataset):
                         dtype=np.uint8)
         for i, p in enumerate(info["polygons"]):
             # Get indexes of pixels inside the polygon and set them to 1
-            rr, cc = skimage.draw.polygon(p['all_points_y'], p['all_points_x'])
+            #rr, cc = skimage.draw.polygon(p['all_points_y'], p['all_points_x'])
+            rr, cc = skimage.draw.polygon(
+                [ p['x'], p['x'] + p['width'], p['x'] + p['width'],  p['x'],               p['x'] ], 
+                [ p['y'], p['y'],              p['y'] + p['height'], p['y'] + p['height'], p['y'] ])
+
+            #print("blarg", rr, cc)
             mask[rr, cc, i] = 1
 
         # Return mask, and array of class IDs of each instance. Since we have
