@@ -162,10 +162,10 @@ class BalloonDataset(utils.Dataset):
                         dtype=np.uint8)
         for i, p in enumerate(info["polygons"]):
             # Get indexes of pixels inside the polygon and set them to 1
-            #rr, cc = skimage.draw.polygon(p['all_points_y'], p['all_points_x'])
-            rr, cc = skimage.draw.polygon(
-                [ p['x'], p['x'] + p['width'], p['x'] + p['width'],  p['x'],               p['x'] ], 
-                [ p['y'], p['y'],              p['y'] + p['height'], p['y'] + p['height'], p['y'] ])
+            rr, cc = skimage.draw.polygon(p['all_points_y'], p['all_points_x'])
+            #rr, cc = skimage.draw.polygon(
+                #[ p['x'], p['x'] + p['width'], p['x'] + p['width'],  p['x'],               p['x'] ], 
+                #[ p['y'], p['y'],              p['y'] + p['height'], p['y'] + p['height'], p['y'] ])
 
             #print("blarg", rr, cc)
             mask[rr, cc, i] = 1
