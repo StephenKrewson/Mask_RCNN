@@ -1,0 +1,44 @@
+
+MacOS or linux terminal command to create your ssh tunnel:
+ssh -N -L 8903:c28n11:8903 swk2@grace.hpc.yale.edu
+   
+For more info and how to connect from windows, 
+   see research.computing.yale.edu/jupyter-nb
+Here is the MobaXterm info:
+
+Forwarded port:same as remote port
+Remote server: c28n11
+Remote port: 8903
+SSH server: grace.hpc.yale.edu
+SSH login: swk2
+SSH port: 22
+
+Use a Browser on your local machine to go to:
+localhost:8903  (prefix w/ https:// if using password)
+
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) StdEnv
+Restoring modules from user's cuda, for system: "grace-rhel7"
+[I 08:39:49.654 NotebookApp] Serving notebooks from local directory: /gpfs/loomis/project/fas/leonard/swk2/Mask_RCNN/samples/balloon
+[I 08:39:49.654 NotebookApp] 0 active kernels
+[I 08:39:49.654 NotebookApp] The Jupyter Notebook is running at:
+[I 08:39:49.654 NotebookApp] http://c28n11:8903/?token=3db5afb1b58c55c6b3ab7321b9f69eaa97a4bf786dc695aa
+[I 08:39:49.654 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 08:39:49.656 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://c28n11:8903/?token=3db5afb1b58c55c6b3ab7321b9f69eaa97a4bf786dc695aa
+[I 08:43:40.976 NotebookApp] 302 GET / (10.181.0.14) 0.81ms
+[I 08:43:41.071 NotebookApp] 302 GET /tree? (10.181.0.14) 1.48ms
+[I 08:44:06.217 NotebookApp] 302 POST /login?next=%2Ftree%3F (10.181.0.14) 1.47ms
+[W 08:44:14.314 NotebookApp] Notebook inspect_balloon_model.ipynb is not trusted
+[I 08:44:23.812 NotebookApp] Kernel started: 09fba479-35f5-485d-a3be-f438aa361c63
+[I 08:44:24.988 NotebookApp] Adapting to protocol v5.1 for kernel 09fba479-35f5-485d-a3be-f438aa361c63
+2018-05-25 08:46:13.367451: I tensorflow/core/platform/cpu_feature_guard.cc:140] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+[I 08:47:06.572 NotebookApp] Saving file at /inspect_balloon_model.ipynb
+[W 08:47:06.573 NotebookApp] Notebook inspect_balloon_model.ipynb is not trusted
+[I 08:52:53.918 NotebookApp] Starting buffering for 09fba479-35f5-485d-a3be-f438aa361c63:71c5ebe19db44ad1866a25dd3638af24
+slurmstepd: error: *** JOB 13683165 ON c28n11 CANCELLED AT 2018-05-25T08:53:28 ***

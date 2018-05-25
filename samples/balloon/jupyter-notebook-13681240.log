@@ -1,0 +1,35 @@
+slurmstepd: error: task/cgroup: unable to add task[pid=27022] to memory cg '(null)'
+
+MacOS or linux terminal command to create your ssh tunnel:
+ssh -N -L 9865:c23n01:9865 swk2@grace.hpc.yale.edu
+   
+For more info and how to connect from windows, 
+   see research.computing.yale.edu/jupyter-nb
+Here is the MobaXterm info:
+
+Forwarded port:same as remote port
+Remote server: c23n01
+Remote port: 9865
+SSH server: grace.hpc.yale.edu
+SSH login: swk2
+SSH port: 22
+
+Use a Browser on your local machine to go to:
+localhost:9865  (prefix w/ https:// if using password)
+
+The following modules were not unloaded:
+  (Use "module --force purge" to unload all):
+
+  1) StdEnv
+Restoring modules from user's cuda, for system: "grace-rhel7"
+[I 23:49:01.626 NotebookApp] Serving notebooks from local directory: /gpfs/loomis/project/fas/leonard/swk2/Mask_RCNN/samples/balloon
+[I 23:49:01.626 NotebookApp] 0 active kernels
+[I 23:49:01.626 NotebookApp] The Jupyter Notebook is running at:
+[I 23:49:01.626 NotebookApp] http://c23n01:9865/?token=6e2f09dd0a63ffdcb1a20f0c68f36d89e8767900ea9f4003
+[I 23:49:01.626 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 23:49:01.628 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://c23n01:9865/?token=6e2f09dd0a63ffdcb1a20f0c68f36d89e8767900ea9f4003
+slurmstepd: error: *** JOB 13681240 ON c23n01 CANCELLED AT 2018-05-24T23:56:06 ***
