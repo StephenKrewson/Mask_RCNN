@@ -37,8 +37,16 @@ localhost:${port}  (prefix w/ https:// if using password)
 # e.g. farnam:
 # module load Python/2.7.13-foss-2016b 
 
+
+module purge
+module restore cuda
+source deactivate
+source activate maskRCNN
+
 # DON'T USE ADDRESS BELOW. 
 # DO USE TOKEN BELOW
+
+
 jupyter-notebook --no-browser --port=${port} --ip=${node}
 
 
